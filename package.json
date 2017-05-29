@@ -1,0 +1,19 @@
+{
+  "name": "react-cheat",
+  "version": "0.1.0",
+  "description": "Cheatsheet for React",
+  "main": "index.js",
+  "repository": "git@github.com:BurntCaramel/react-cheat.git",
+  "author": "Patrick Smith <patrick@burntcaramel.com>",
+  "license": "MIT",
+  "dependencies": {
+    "next": "beta",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  }
+}
