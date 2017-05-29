@@ -1,9 +1,5 @@
 import Head from 'next/head'
-
-const colors = {
-  dark: '#444',
-  light: 'white'
-}
+import * as colors from '../components/colors'
 
 export default ({
   children
@@ -53,6 +49,9 @@ button {
   background: ${colors.dark};
 }
 
+main {
+  padding-bottom: 2rem;
+}
 main > * {
   max-width: 30rem;
   padding-left: 0.5rem;
