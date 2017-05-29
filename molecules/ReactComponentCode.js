@@ -1,11 +1,11 @@
 import Code from '../components/Code'
 
-function codeForPropsList(propsList, { indent = '' } = {}) {
+function codeForPropsList(propsList, { indent = '', suffix = '' } = {}) {
   if (propsList.length === 0) {
     return ''
   }
 
-  return `{\n${indent}  ${propsList.join(`,\n${indent}  `)}\n${indent}}`
+  return `{\n${indent}  ${propsList.map(s => s + suffix).join(`,\n${indent}  `)}\n${indent}}`
 }
 
 function makeFunctionComponent({ name, propsList }) {
@@ -21,10 +21,12 @@ export default function ${name}(${codeForPropsList(propsList)}) {
 function makeClassComponent({ name, propsList, stateList, urlToLoad }) {
   return `
 export default class ${name} extends Component {
-  state = ${codeForPropsList(stateList, { indent: '  ' })}
+  state = ${codeForPropsList(stateList, { indent: '  ', suffix: ': null' })}
 
   render () {
     const ${codeForPropsList(propsList, { indent: '    ' })} = this.props
+    const ${codeForPropsList(stateList, { indent: '    ' })} = this.state
+
     return (
       …
     )
