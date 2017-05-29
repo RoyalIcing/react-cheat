@@ -1,5 +1,5 @@
 export default ({
   children
 }) => (
-  <pre><code>{ children }</code></pre>
+  <pre><code>{ children.trim() }</code></pre>
 )

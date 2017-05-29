@@ -25,6 +25,8 @@ body {
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   font-size: inherit;
   font-family: inherit;
 }
@@ -33,6 +35,13 @@ pre {
 }
 h1 {
   font-size: 2rem;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h2 {
+  font-size: 1.5rem;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
 }
 input {
   border: 1px solid ${colors.dark};
@@ -46,6 +55,8 @@ button {
 
 main > * {
   max-width: 30rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   margin-left: auto;
 	margin-right: auto;
 }

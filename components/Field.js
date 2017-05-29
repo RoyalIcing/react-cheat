@@ -1,11 +1,12 @@
 export default ({
   label,
   value,
+  readOnly,
   onChange
 }) => (
   <div>
     { label && <label>{ label }</label> }
-    <input value={ value } onChange={ onChange } />
+    <input value={ value } readOnly={ readOnly } onChange={ onChange } />
     <style jsx>{`
 div {
   flex-grow: 1;
