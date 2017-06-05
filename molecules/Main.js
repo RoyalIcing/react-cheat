@@ -40,13 +40,22 @@ h2 {
   margin-bottom: 0.5em;
 }
 input {
-  border: 1px solid ${colors.dark};
+  border: 1px solid transparent;
+  border-bottom: 1px solid ${colors.dark};
+}
+input:focus {
+  border: 1px solid ${colors.key};
+  outline-color: ${colors.key};
 }
 button {
   padding: 0 0.5em;
   border: none;
   color: ${colors.light};
   background: ${colors.dark};
+}
+button:focus {
+  color: ${colors.key};
+  outline-color: ${colors.key};
 }
 
 main {
