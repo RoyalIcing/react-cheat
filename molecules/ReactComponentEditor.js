@@ -8,7 +8,7 @@ import EditableList from '../components/EditableList'
 const renderPropAtIndex = ({ item, index, onChangeAtIndex }) => (
   <Field
     value={ item }
-    onChange={ (event) => { console.log('?', event.target.value); onChangeAtIndex({ index, value: event.target.value }) } }
+    onChange={ (event) => { onChangeAtIndex({ index, value: event.target.value }) } }
   />
 )
 

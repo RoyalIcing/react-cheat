@@ -21,7 +21,7 @@ export const changePropAtIndex = ({ index, value }) => ({ propsList }) => ({
 })
 
 export const removePropAtIndex = ({ index }) => ({ propsList }) => ({
-  stateList: stateList.filter((name, currentIndex) => index !== currentIndex)
+  propsList: propsList.filter((name, currentIndex) => index !== currentIndex)
 })
 
 export const addState = () => ({ stateList }) => ({
