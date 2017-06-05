@@ -4,7 +4,6 @@ export default (handlersIn) => class Organism extends React.Component {
   handlers = Object.keys(handlersIn).reduce((out, key) => {
     out[key] = (...args) => {
       const stateChanger = handlersIn[key].apply(this, args)
-      console.log('stateChanger', stateChanger.length, stateChanger)
       if (stateChanger) {
         this.setState(stateChanger)
       }
