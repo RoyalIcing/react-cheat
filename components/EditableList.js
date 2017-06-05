@@ -7,10 +7,10 @@ export default ({
   onChangeAtIndex,
   onRemoveAtIndex
 }) => (
-  <div>
+  <div className='mb-3'>
   {
     items.map((item, index) => (
-      <Row key={ index } bottomSpacing>
+      <Row key={ index } bottomSpacing={ 2 }>
         { renderItemAtIndex({ item: items[index], index, onChangeAtIndex }) }
         <button onClick={ () => onRemoveAtIndex(index) }>−</button>
       </Row>

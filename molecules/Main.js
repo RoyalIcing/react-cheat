@@ -68,6 +68,16 @@ main > * {
   margin-left: auto;
 	margin-right: auto;
 }
+
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+.mb-3 {
+  margin-bottom: 1rem;
+}
 `}</style>
   </main>
 )

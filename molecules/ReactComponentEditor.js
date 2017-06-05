@@ -34,7 +34,7 @@ export default ({
   }
 }) => (
   <div>
-    <Row bottomSpacing>
+    <Row bottomSpacing={ 3 }>
       <Field label='Name' value={ name } onChange={ changeName } />
     </Row>
     <Label title='Props'>
