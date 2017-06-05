@@ -4,13 +4,14 @@ export default ({
   items,
   renderItemAtIndex,
   onAdd,
+  onChangeAtIndex,
   onRemoveAtIndex
 }) => (
   <div>
   {
     items.map((item, index) => (
       <Row key={ index } bottomSpacing>
-        { renderItemAtIndex(index) }
+        { renderItemAtIndex({ item: items[index], index, onChangeAtIndex }) }
         <button onClick={ () => onRemoveAtIndex(index) }>−</button>
       </Row>
     ))
