@@ -3,6 +3,7 @@ import ReactComponentCode from './ReactComponentCode'
 import Row from '../components/Row'
 import Field from '../components/Field'
 import Label from '../components/Label'
+import ButtonGroup from '../components/ButtonGroup'
 import EditableList from '../components/EditableList'
 
 const renderPropAtIndex = ({ item, index, onChangeAtIndex }) => (
@@ -55,6 +56,9 @@ export default ({
         onRemoveAtIndex={ removeStateAtIndex }
       />
     </Label>
+    { false && <Row bottomSpacing={ 2 }>
+      <ButtonGroup activeID='normal' items={ [ { title: 'Normal', id: 'normal' }, { title: 'Organism', id: 'organism' } ] } />
+    </Row> }
     <ReactComponentCode name={ name } propsList={ propsList } stateList={ stateList } />
   </div>
 )

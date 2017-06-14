@@ -53,9 +53,16 @@ button {
   color: ${colors.light};
   background: ${colors.dark};
 }
+button.active {
+  color: ${colors.dark};
+  background: ${colors.key};
+}
 button:focus {
   color: ${colors.key};
   outline-color: ${colors.key};
+}
+button.active:focus {
+  color: ${colors.light};
 }
 
 main {

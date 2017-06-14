@@ -1,4 +1,4 @@
-export default (handlersIn) => class Organism extends React.Component {
+export default (handlersIn, Component) => class Organism extends React.Component {
   state = handlersIn.initial(this.props)
 
   handlers = Object.keys(handlersIn).reduce((out, key) => {
@@ -12,7 +12,6 @@ export default (handlersIn) => class Organism extends React.Component {
   }, {})
 
   render() {
-    const Component = this.props.Component
     return <Component { ...this.props } { ...this.state } handlers={ this.handlers } />
   }
 }
