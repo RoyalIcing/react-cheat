@@ -23,7 +23,7 @@ function makeClassComponent({ name, propsList, stateList, urlToLoad }) {
 export default class ${name} extends Component {
   state = ${codeForPropsList(stateList, { indent: '  ', suffix: ': null' })}
 
-  render () {
+  render() {
     const ${codeForPropsList(propsList, { indent: '    ' })} = this.props
     const ${codeForPropsList(stateList, { indent: '    ' })} = this.state
 

@@ -1,4 +1,5 @@
-import make from '../make'
+import makeOrganism from 'react-organism'
+import Editor from '../../molecules/ReactComponentEditor'
 import * as stateHandlers from './state'
 
-export default make(stateHandlers)
+export default makeOrganism(Editor, stateHandlers)
