@@ -10,7 +10,7 @@ function codeForPropsList(propsList, { indent = '', suffix = '' } = {}) {
 
 function makeFunctionComponent({ name, propsList }) {
   return `
-export default function ${name}(${codeForPropsList(propsList)}) {
+function ${name}(${codeForPropsList(propsList)}) {
   return (
     …
   )
@@ -20,7 +20,7 @@ export default function ${name}(${codeForPropsList(propsList)}) {
 
 function makeClassComponent({ name, propsList, stateList, urlToLoad }) {
   return `
-export default class ${name} extends Component {
+class ${name} extends Component {
   state = ${codeForPropsList(stateList, { indent: '  ', suffix: ': null' })}
 
   render() {
