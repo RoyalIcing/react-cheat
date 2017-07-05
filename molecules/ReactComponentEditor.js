@@ -7,7 +7,6 @@ import ButtonGroup from '../components/ButtonGroup'
 import EditableList from '../components/EditableList'
 
 const renderPropAtIndex = ({ item, index, onChangeAtIndex }) => (
-  console.log({ item, index }),
   <Field
     value={ item }
     index={ index }

@@ -15,9 +15,9 @@ export const addProp = (props) => ({ propsList }) => ({
 })
 
 export const changePropAtIndex = (props, { index, value }) => ({ propsList }) => ({
-  propsList: (console.log('changePropAtIndex', index, value), propsList.map((original, currentIndex) => (
+  propsList: propsList.map((original, currentIndex) => (
     (currentIndex == index) ? value : original
-  )))
+  ))
 })
 
 export const removePropAtIndex = (props, { index }) => ({ propsList }) => ({
