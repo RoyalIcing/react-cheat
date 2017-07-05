@@ -2,7 +2,7 @@ import Row from './Row'
 
 export default ({
   items,
-  renderItemAtIndex,
+  Item,
   onAdd,
   onChangeAtIndex,
   onRemoveAtIndex
@@ -11,8 +11,12 @@ export default ({
   {
     items.map((item, index) => (
       <Row key={ index } bottomSpacing={ 2 }>
-        { renderItemAtIndex({ item: items[index], index, onChangeAtIndex }) }
-        <button onClick={ (event) => onRemoveAtIndex({ index }) }>−</button>
+        <Item
+          item={ items[index] }
+          index={ index }
+          onChangeAtIndex={ onChangeAtIndex }
+        />
+        <button data-index_number={ index } onClick={ onRemoveAtIndex }>−</button>
       </Row>
     ))
   }

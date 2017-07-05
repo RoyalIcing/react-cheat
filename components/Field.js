@@ -1,12 +1,20 @@
 export default ({
   label,
   value,
+  defaultValue,
   readOnly,
+  index,
   onChange
 }) => (
   <div>
     { label && <label>{ label }</label> }
-    <input value={ value } readOnly={ readOnly } onChange={ onChange } />
+    <input
+      defaultValue={ defaultValue }
+      value={ value }
+      readOnly={ readOnly }
+      onChange={ onChange }
+      data-index_number={ index }
+    />
     <style jsx>{`
 div {
   flex-grow: 1;

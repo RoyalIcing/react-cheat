@@ -10,7 +10,7 @@
     "next": "beta",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-organism": "^0.2.0-b2",
+    "react-organism": "^0.2.0-b7",
     "react-syntax-highlighter": "^5.6.2"
   },
   "scripts": {

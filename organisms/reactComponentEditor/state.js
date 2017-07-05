@@ -6,8 +6,8 @@ export const initial = () => ({
   stateList: []
 })
 
-export const changeName = (props, { target: { value } }) => ({
-  name: value
+export const changeName = (props, args) => ({
+  name: args.value
 })
 
 export const addProp = (props) => ({ propsList }) => ({
@@ -15,9 +15,9 @@ export const addProp = (props) => ({ propsList }) => ({
 })
 
 export const changePropAtIndex = (props, { index, value }) => ({ propsList }) => ({
-  propsList: propsList.map((original, currentIndex) => (
+  propsList: (console.log('changePropAtIndex', index, value), propsList.map((original, currentIndex) => (
     (currentIndex == index) ? value : original
-  ))
+  )))
 })
 
 export const removePropAtIndex = (props, { index }) => ({ propsList }) => ({
